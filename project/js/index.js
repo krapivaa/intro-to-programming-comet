@@ -6,14 +6,10 @@ let skillList = skillsSection.getElementsByTagName("ul")[0];
 
 
 for (let i = 0; i < skills.length; i ++) {
-
     skill = document.createElement("li");
     skill.innerHTML = skills[i];
     skillList.appendChild(skill);
-
 }
-
-
 
 
 //FOOTER
