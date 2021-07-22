@@ -1,5 +1,5 @@
 //SKILLS
-let skills =["HTML", "CSS", "JavaScript", "..."];
+let skills =["HTML", "CSS", "JavaScript"];
 
 let skillsSection = document.getElementById("skills");
 let skillList = skillsSection.getElementsByTagName("ul")[0];
