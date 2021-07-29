@@ -29,6 +29,7 @@ messageForm.addEventListener("submit", (e) => {
     let messageSection = document.getElementById("messages");
     //remove hidden attribute
     messageSection.removeAttribute("hidden");
+
     let messageList = messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
     newMessage.innerHTML = `<a href=mailto:${email}>${name}</a> wrote: <span>${message} </span>`;
@@ -74,7 +75,6 @@ messageForm.addEventListener("submit", (e) => {
     }
     
     });
-
 
     //append elements
     newMessage.appendChild(editButton);
