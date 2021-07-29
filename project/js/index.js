@@ -12,8 +12,6 @@ for (let i = 0; i < skills.length; i ++) {
 }
 
 //MESSAGES
-//Hide the #messages section when the list is empty
-// Create an "edit" button for each message entry that allows the user to input a new/modified message
 
 let messageForm = document.getElementsByName("leave_message")[0];
 
@@ -29,9 +27,12 @@ messageForm.addEventListener("submit", (e) => {
 
 
     let messageSection = document.getElementById("messages");
+    //remove hidden attribute
+    messageSection.removeAttribute("hidden");
+
     let messageList = messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
-    newMessage.innerHTML = `<a href=mailto:${email}>${name}</a> wrote: <span id="spanMessage">${message} </span>`;
+    newMessage.innerHTML = `<a href=mailto:${email}>${name}</a> wrote: <span>${message} </span>`;
 
     //edit button
     let editButton =  document.createElement("button");
@@ -40,16 +41,16 @@ messageForm.addEventListener("submit", (e) => {
 
     editButton.addEventListener("click", (e) => {
 
-        if (editButton.textContent === 'edit') {
-            let span  =  document.getElementById("spanMessage");
+        if (editButton.textContent === "edit") {
+            let span  =  newMessage.querySelector("span");
             let input = document.createElement("input");
             input.type = "text";
             input.value = span.textContent;
             newMessage.insertBefore(input, span);
             newMessage.removeChild(span);
             editButton.textContent = "save";
-        } else if (editButton.textContent === 'save') {
-            // let input  = document.firstElementChild("span");
+        } else if (editButton.textContent === "save") {
+            let input  = newMessage.querySelector("input");
             let span = document.createElement("span");
             span.textContent = input.value;
             newMessage.insertBefore(span, input);
@@ -65,10 +66,15 @@ messageForm.addEventListener("submit", (e) => {
     removeButton.type = "button";
 
     removeButton.addEventListener("click", (e) => {
-    let entry  = e.target.parentNode;
-    entry.remove();
+    let li  = e.target.parentNode;
+    let ul = li.parentNode;
+    li.remove();
+    
+    if (ul.childElementCount == 0) {
+        messageSection.setAttribute("hidden", true);
+    }
+    
     });
-
 
     //append elements
     newMessage.appendChild(editButton);
@@ -76,7 +82,6 @@ messageForm.addEventListener("submit", (e) => {
     messageList.appendChild(newMessage);
 
    
-
     messageForm.reset();
     
 });
