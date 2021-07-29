@@ -12,6 +12,9 @@ for (let i = 0; i < skills.length; i ++) {
 }
 
 //MESSAGES
+//Hide the #messages section when the list is empty
+// Create an "edit" button for each message entry that allows the user to input a new/modified message
+
 let messageForm = document.getElementsByName("leave_message")[0];
 
 
@@ -37,7 +40,7 @@ messageForm.addEventListener("submit", (e) => {
 
     editButton.addEventListener("click", (e) => {
 
-        if (editButton.textContent = 'edit') {
+        if (editButton.textContent === 'edit') {
             let span  =  document.getElementById("spanMessage");
             let input = document.createElement("input");
             input.type = "text";
@@ -45,8 +48,8 @@ messageForm.addEventListener("submit", (e) => {
             newMessage.insertBefore(input, span);
             newMessage.removeChild(span);
             editButton.textContent = "save";
-        } else if (editButton.textContent = 'save') {
-            let input  =  newMessage.firstElementChild("span");
+        } else if (editButton.textContent === 'save') {
+            // let input  = document.firstElementChild("span");
             let span = document.createElement("span");
             span.textContent = input.value;
             newMessage.insertBefore(span, input);
