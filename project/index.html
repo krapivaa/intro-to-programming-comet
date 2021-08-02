@@ -6,10 +6,16 @@
         Marina's Portfolio
     </title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    
+    <!--Google  font - Lato Thin 100 italic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div>
+    <div class="main">
         <header>
             <nav>
                
@@ -17,8 +23,10 @@
                     <a href="#experience">Experience</a>
                     <a href="#skills">Skills</a>
                     <a href="#connect">Connect</a>
+                    <a href="#leaveMessage">Message Me</a>
 
             </nav>
+            <h1>Marina's Portfolio</h1>
         </header>
 
         <section id="about">
@@ -50,12 +58,12 @@
                 
                 <a href="mailto:verasen.create@gmail.com">Email me</a>
 
-                <h4><a href="https://twitter.com/VerasenCreate" target="_blank">Twitter</a></h4>
+                <h4><a href="https://twitter.com/VerasenCreate" target="_blank" >Twitter</a></h4>
                   
             
         </section>
 
-        <section>
+        <section id="leaveMessage">
             <h2>Leave a Message</h2>
             <form name="leave_message">
                 <label for="name">Name: </label><br>
@@ -76,16 +84,16 @@
         </section>
 
         <footer>
-            <!-- <form action=”index.html” method=”post”>
+            <section id="signup">
+                <form action=”index.html” method=”post”>
+                    
+                    <label for="signup">Sign up for updates:</label> <br>
+                    <input type=”email” id=”email” name=”email” required><br>
+                                
+                    <button class="button" type="submit">Send</button>
                 
-                <label for="signup">Sign up for updates</label>
-                  <input type=”email” id=”email” name=”email” required><br>
-                              
-                  <button class="button" type="submit">Send</button>
-              
-              </form> -->
-
-
+                </form>
+            </section>
         </footer>
     </div>
 

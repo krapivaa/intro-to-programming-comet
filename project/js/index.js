@@ -1,5 +1,5 @@
 //SKILLS
-let skills =["HTML", "CSS", "JavaScript"];
+let skills =["HTML", "CSS", "JavaScript", "Git", "Bootstrap"];
 
 let skillsSection = document.getElementById("skills");
 let skillList = skillsSection.getElementsByTagName("ul")[0];
@@ -8,6 +8,7 @@ let skillList = skillsSection.getElementsByTagName("ul")[0];
 for (let i = 0; i < skills.length; i ++) {
     skill = document.createElement("li");
     skill.innerHTML = skills[i];
+    // skill.style.border = "2px solid black";
     skillList.appendChild(skill);
 }
 
