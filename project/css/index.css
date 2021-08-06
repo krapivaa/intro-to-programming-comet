@@ -1,0 +1,99 @@
+/*
+Use Media Queries to make sure the webpage is responsive for all device sizes (mobile, tablet, desktop, etc.)
+
+color: midnightblue;
+*/
+
+html {
+    background-color: #FFF8E7;
+    font-family: 'Lato', sans-serif;
+    color: #44362F;
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    background-color: burlywood;
+     color: white;
+     padding: 1em;
+}
+
+nav a {
+    padding: 00.5rem;
+    color: #610b0b;
+}
+
+section {
+    margin-left: 0.5rem;
+    padding: 0.25rem;
+}
+
+section ul {
+    list-style: circle inside;
+ }
+
+ a {
+    color: #44362F;
+    text-decoration: none;
+  }
+ 
+  a:hover {
+    text-decoration: underline;
+  }
+
+ h2 {
+     color:chocolate;
+     size: 0.75rem;
+     font-weight: bold;
+ }
+
+
+button {
+    padding: 0.5em;
+    margin: 0.25em;
+    font-family: 'Lato', sans-serif;
+    color: #610b0b;
+    border-radius: 5px;
+    border:1px solid #610b0b;
+}
+
+ #messages ul {
+    list-style: decimal;
+ }
+
+ form label {
+    font-family: 'Lato', sans-serif;
+    color: #610b0b;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.5em;
+    
+ }
+
+ form input {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    margin-bottom: 1em;
+    margin-top: 1em;
+ }
+
+ form textarea {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+    margin-bottom: 1em;
+    margin-top: 1em;  
+ }
+/* #signup {
+
+} */
+
+footer {
+    background-color: burlywood;
+    letter-spacing: 0.25rem;
+}
+
+footer p {
+    padding: 0.25rem;
+    color: #610b0b;
+    border-top: dotted lightgrey 2px;
+}
