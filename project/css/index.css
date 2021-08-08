@@ -3,10 +3,18 @@ Use Media Queries to make sure the webpage is responsive for all device sizes (m
 
 color: midnightblue;
 */
+/* 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} */
+
 
 html {
     background-color: #FFF8E7;
     font-family: 'Lato', sans-serif;
+    font-size: 20px;
     color: #44362F;
     padding: 0px;
     margin: 0px;
@@ -14,8 +22,24 @@ html {
 
 header {
     background-color: burlywood;
-     color: white;
-     padding: 1em;
+    color: brown;
+    padding: 1em;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+header h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding: 5px;
 }
 
 nav a {
@@ -23,14 +47,44 @@ nav a {
     color: #610b0b;
 }
 
+
 section {
-    margin-left: 0.5rem;
+     margin-left: 0.5rem; 
     padding: 0.25rem;
 }
 
-section ul {
-    list-style: circle inside;
+section li {
+    list-style: none;
+    padding: 5px;
+    /* align-self: center; */
+    /* margin: 10px; */
  }
+
+ .container {
+     display: flex;
+     flex-direction: row;
+     border: 0.5px brown solid;
+     
+     /* align-items: center ; */
+ }
+
+ /* .container li {
+    flex-grow: 1;
+    flex-basis: 200px;
+ } */
+
+ #containerSkills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /* border: 3px brown solid; */
+}
+
+.itemSkills {
+    border: 1px brown solid;
+    padding: 10px;
+    margin: 10px;
+}
 
  a {
     color: #44362F;
@@ -45,6 +99,7 @@ section ul {
      color:chocolate;
      size: 0.75rem;
      font-weight: bold;
+     margin: 0px;
  }
 
 
@@ -55,6 +110,7 @@ button {
     color: #610b0b;
     border-radius: 5px;
     border:1px solid #610b0b;
+    max-height: 40px;
 }
 
  #messages ul {
@@ -64,32 +120,64 @@ button {
  form label {
     font-family: 'Lato', sans-serif;
     color: #610b0b;
-    font-size: 1em;
+    font-size: 15px;
     font-weight: bold;
-    padding: 0.5em;
-    
  }
 
  form input {
     padding: 0.5rem;
     font-size: 0.75rem;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    /* margin-bottom: 1em;
+    margin-top: 1em; */
  }
 
  form textarea {
-    padding: 0.5rem;
+    padding: 5px;
     font-size: 0.75rem;
     margin-bottom: 1em;
-    margin-top: 1em;  
+    /* margin-top: 1em;   */
  }
-/* #signup {
 
-} */
+/* Grid container */
+ .messageSection {
+   display: grid;
+   grid-template-columns: 30% 50%;
+ }
+ /* Grid items */
+ #leaveMessage {
+   
+ }
+
+ /* #messages {
+
+ } */
+
+ .newMessage {
+     background-color: white;
+     padding: 10px;
+     display: grid;
+     grid-template-columns: minmax(100px, 1fr) 1fr minmax(100px, 4fr) repeat(2, minmax(60px, 70px));
+     grid-gap: 5px;
+ }
+  
+ 
+/*  */
+
+ form {
+   margin-top: 18px;
+
+ }
+
+
+ .remove {
+    border:2px solid red;
+ }
 
 footer {
     background-color: burlywood;
     letter-spacing: 0.25rem;
+    margin-bottom: 0px;
+
 }
 
 footer p {
@@ -97,3 +185,48 @@ footer p {
     color: #610b0b;
     border-top: dotted lightgrey 2px;
 }
+
+
+
+@media print {
+    section {
+        min-height: auto;
+        margin: 0;
+    }
+    header {
+        position: relative;
+    }
+}
+
+ @media screen and (min-width: 150px) and (max-width: 530px) {
+  .container {
+    /* display: list-item;
+    list-style: none; */
+    flex-direction: column;
+  }
+
+  /* #containerSkills {
+    flex-direction: column;
+  } */
+} 
+
+@media screen and (min-width: 150px) and (max-width: 1055px) {
+    .messageSection {
+        display: flex;
+        flex-direction: column;      
+      }
+    .newMessage {
+        display: list-item;
+        list-style: none; 
+        justify-content: center;
+    }
+}
+
+/* .container {
+    display: grid;
+    grid-template-rows: 200px 300px 100px;
+    grid-template-columns: 200px 400px 200px;
+    grid-gap: 20px;
+    } */
+    
+

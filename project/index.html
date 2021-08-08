@@ -6,6 +6,7 @@
         Marina's Portfolio
     </title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/index.css">
     
     <!--Google  font - Lato Thin 100 italic -->
@@ -17,52 +18,55 @@
 <body>
     <div class="main">
         <header>
-            <nav>
-               
+            <nav>      
                     <a href="#about">About</a>
                     <a href="#experience">Experience</a>
                     <a href="#skills">Skills</a>
-                    <a href="#connect">Connect</a>
+                    <a href="#projects">Projects</a>
                     <a href="#leaveMessage">Message Me</a>
 
             </nav>
-            <h1>Marina's Portfolio</h1>
+          
+            <h2>Marina's Portfolio</h2>
         </header>
 
         <section id="about">
             <h2>About</h2>
+            
+            <div class="aboutContainer">
+
                 <p>Dedicated future junior web developer looking to utilize teamwork, curious nature, problem-solving skills and creativity to make a powerful impact.</p>
 
-                <p>Born and raised in Belarus, a beautiful country in Eastern Europe, I am now live in the Washington DC area. I am fond of photography, reading, creating something with my own hands, being connected to the nature. </p>
+                <!-- <p>Born and raised in Belarus, a beautiful country in Eastern Europe, I am now live in the Washington DC area. I am fond of photography, reading, creating something with my own hands, being connected to the nature. </p>
 
-                <p>I speak English, Russian and Belarusian. The JavaScript language will soon be under my belt too.</p> 
+                <p>I speak English, Russian and Belarusian. The JavaScript language will soon be under my belt too.</p>  -->
+            </div>
         </section>
             
 
         <section id="experience">
             <h2>Experience</h2>
-            <ul>
-                <li>TBD</li>
-                <li>TBD</li>
+            <ul class="container">
+                <li>Nullam faucibus nibh eget ante malesuada, non dictum nunc imperdiet. Pellentesque id erat placerat, feugiat turpis sed, scelerisque nulla. Fusce euismod, leo quis iaculis mollis, purus felis suscipit ligula, sit amet imperdiet dui tellus in eros. </li>
+                <li>Aliquam erat volutpat. Etiam eget convallis nibh. Sed tincidunt pretium erat a sodales. Etiam sit amet luctus lacus.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta dignissim lorem, et interdum arcu lobortis eu. Cras non scelerisque nunc. Nullam faucibus nibh eget ante malesuada, non dictum nunc imperdiet.</li>
             </ul>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-            <ul></ul>
+            <ul id="containerSkills"></ul>
         </section>
 
-        <section id="connect">
-            <h2>Connect</h2>
-        
-                
-                <a href="mailto:verasen.create@gmail.com">Email me</a>
-
-                <h4><a href="https://twitter.com/VerasenCreate" target="_blank" >Twitter</a></h4>
-                  
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>GitHub Project 1</li>
+            </ul>
             
         </section>
 
+        <div class="messageSection">
         <section id="leaveMessage">
             <h2>Leave a Message</h2>
             <form name="leave_message">
@@ -82,17 +86,23 @@
             <h2>Messages</h2>
             <ul></ul>
         </section>
+    </div>
 
         <footer>
-            <section id="signup">
-                <form action=”index.html” method=”post”>
+            <section>
+                <!-- <form action=”index.html” method=”post” id="signup">
                     
                     <label for="signup">Sign up for updates:</label> <br>
                     <input type=”email” id=”email” name=”email” required><br>
                                 
                     <button class="button" type="submit">Send</button>
                 
-                </form>
+                </form> -->
+
+                <a href="mailto:verasen.create@gmail.com">Email</a>
+
+                <a href="https://twitter.com/VerasenCreate" target="_blank" >Twitter</a>
+
             </section>
         </footer>
     </div>

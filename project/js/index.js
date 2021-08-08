@@ -8,7 +8,7 @@ let skillList = skillsSection.getElementsByTagName("ul")[0];
 for (let i = 0; i < skills.length; i ++) {
     skill = document.createElement("li");
     skill.innerHTML = skills[i];
-    // skill.style.border = "2px solid black";
+    skill.className = "itemSkills";
     skillList.appendChild(skill);
 }
 
@@ -33,7 +33,8 @@ messageForm.addEventListener("submit", (e) => {
 
     let messageList = messageSection.querySelector("ul");
     let newMessage = document.createElement("li");
-    newMessage.innerHTML = `<a href=mailto:${email}>${name}</a> wrote: <span>${message} </span>`;
+    newMessage.innerHTML = `<a href=mailto:${email}><b>${name}</b></a> wrote: <span>${message} </span>`;
+    newMessage.className = "newMessage";
 
     //edit button
     let editButton =  document.createElement("button");
@@ -65,6 +66,7 @@ messageForm.addEventListener("submit", (e) => {
     let removeButton = document.createElement("button");
     removeButton.innerText = "remove";
     removeButton.type = "button";
+    removeButton.className = "remove";
 
     removeButton.addEventListener("click", (e) => {
     let li  = e.target.parentNode;
@@ -95,5 +97,5 @@ let thisYear = today.getFullYear();
 const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 
-copyright.innerHTML = "Marina Ivanovskaya  " + thisYear;
+copyright.innerHTML = "Created by <b>Marina Ivanovskaya</b>&copy  " + thisYear;
 footer.appendChild(copyright);
