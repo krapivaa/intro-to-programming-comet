@@ -1,14 +1,9 @@
-/*
-Use Media Queries to make sure the webpage is responsive for all device sizes (mobile, tablet, desktop, etc.)
+/*  */
 
-color: midnightblue;
-*/
-/* 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-} */
+   padding: 0px;
+   margin: 0px;
+}
 
 
 html {
@@ -20,11 +15,11 @@ html {
     margin: 0px;
 }
 
+
 header {
     background-color: burlywood;
     color: brown;
-    padding: 1em;
-    position: -webkit-sticky;
+    padding: 3px;
     position: sticky;
     top: 0px;
 }
@@ -38,18 +33,21 @@ nav {
 header h2 {
     display: flex;
     justify-content: center;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     padding: 5px;
 }
 
 nav a {
-    padding: 00.5rem;
+    padding: 5px;
+    margin: 5px;
     color: #610b0b;
+    font-size: 15px;
 }
 
 
 section {
-     margin-left: 0.5rem; 
+    margin-top: 0.25rem;
+    margin-left: 0.5rem; 
     padding: 0.25rem;
 }
 
@@ -64,7 +62,6 @@ section li {
      display: flex;
      flex-direction: row;
      border: 0.5px brown solid;
-     
      /* align-items: center ; */
  }
 
@@ -72,6 +69,12 @@ section li {
     flex-grow: 1;
     flex-basis: 200px;
  } */
+
+ /* .container li {
+    border: 0.5px brown solid;
+    margin: 10px 0;
+    background-color: rgb(243, 228, 211);
+} */
 
  #containerSkills {
     display: flex;
@@ -84,6 +87,19 @@ section li {
     border: 1px brown solid;
     padding: 10px;
     margin: 10px;
+}
+
+.projectStyle {
+   display: inline-block;
+   column-count: 2;
+   margin: 5px;
+   padding: 5px; 
+}
+
+.projectUl {
+    padding: 5px;
+    color: #610b0b;
+
 }
 
  a {
@@ -144,13 +160,6 @@ button {
    grid-template-columns: 30% 50%;
  }
  /* Grid items */
- #leaveMessage {
-   
- }
-
- /* #messages {
-
- } */
 
  .newMessage {
      background-color: white;
@@ -165,7 +174,6 @@ button {
 
  form {
    margin-top: 18px;
-
  }
 
 
@@ -176,16 +184,19 @@ button {
 footer {
     background-color: burlywood;
     letter-spacing: 0.25rem;
-    margin-bottom: 0px;
-
+    padding: 5px;;
+ 
+    /* margin-bottom: 0px; 
+    font-size: 15px; */
 }
 
 footer p {
     padding: 0.25rem;
     color: #610b0b;
     border-top: dotted lightgrey 2px;
+    font-size: 15px;
+    margin: 0;
 }
-
 
 
 @media print {
@@ -210,6 +221,13 @@ footer p {
   } */
 } 
 
+@media screen and (min-width: 150px) and (max-width: 690px) {
+    .projectStyle {
+        display: list-item;
+        column-count: 1;
+        list-style: none; 
+    }
+}
 @media screen and (min-width: 150px) and (max-width: 1055px) {
     .messageSection {
         display: flex;
@@ -221,6 +239,8 @@ footer p {
         justify-content: center;
     }
 }
+
+
 
 /* .container {
     display: grid;
