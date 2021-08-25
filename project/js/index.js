@@ -12,8 +12,51 @@ for (let i = 0; i < skills.length; i ++) {
     skillList.appendChild(skill);
 }
 
-//MESSAGES
+//PROJECTS
 
+//for each AJAXrequest new XHR object should be created
+let  githubRequest = new XMLHttpRequest();
+
+
+//craete callback function - asynchronous part of AJAX - to trigger the call back we use a special browser event
+githubRequest.onreadystatechange= function () {
+
+    if (githubRequest.readyState === 4) {
+   let repositories = JSON.parse(this.response);
+   console.log(repositories);
+   
+    let projectSection = document.getElementById("projects");
+    let projectList = projectSection.querySelector("ul");
+
+    for (let i  = 0; i < repositories.length; i++){
+
+
+      let project = document.createElement("a");
+      project.href = repositories[i].html_url; 
+      project.target = "_blank"  
+
+      project.innerText = repositories[i].name.toUpperCase(); 
+      project.className  = "projectUl";
+
+      let projectlan = document.createElement("li");
+      projectlan.innerText = repositories[i].language;   
+      projectlan.style.fontStyle = "italic"; 
+
+      projectList.appendChild(project);
+      projectList.appendChild(projectlan);
+
+    }
+  } 
+}
+
+//sending the request
+githubRequest.open("GET", "https://api.github.com/users/krapivaa/repos");
+githubRequest.send();
+
+
+
+
+//MESSAGES
 let messageForm = document.getElementsByName("leave_message")[0];
 
 
@@ -62,20 +105,20 @@ messageForm.addEventListener("submit", (e) => {
     
     });
 
-    //remove button
-    let removeButton = document.createElement("button");
-    removeButton.innerText = "remove";
-    removeButton.type = "button";
-    removeButton.className = "remove";
+        //remove button
+        let removeButton = document.createElement("button");
+        removeButton.innerText = "remove";
+        removeButton.type = "button";
+        removeButton.className = "remove";
 
-    removeButton.addEventListener("click", (e) => {
-    let li  = e.target.parentNode;
-    let ul = li.parentNode;
-    li.remove();
-    
-    if (ul.childElementCount == 0) {
-        messageSection.setAttribute("hidden", true);
-    }
+        removeButton.addEventListener("click", (e) => {
+        let li  = e.target.parentNode;
+        let ul = li.parentNode;
+        li.remove();
+        
+        if (ul.childElementCount == 0) {
+            messageSection.setAttribute("hidden", true);
+        }
     
     });
 
@@ -84,7 +127,6 @@ messageForm.addEventListener("submit", (e) => {
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
 
-   
     messageForm.reset();
     
 });
