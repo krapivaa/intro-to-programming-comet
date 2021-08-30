@@ -1,91 +1,110 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <title>
-        Marina's Portfolio
-    </title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/index.css">
-    
+  <head>
+    <title>Marina's Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/index.css" />
+
     <!--Google  font - Lato Thin 100 italic -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,100&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-        <header>
-            <nav>      
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#leaveMessage">Message Me</a>
+  <body>
+    <header>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skill">Skills</a>
+        <a href="#project">Projects</a>
+        <a href="#message">Message Me</a>
+      </nav>
 
-            </nav>
-          
-            <h2>Marina Ivanovskaya</h2>
-        </header>
-        
-        <main class="pic">
-        <section id="about">
-            <h2>About</h2>
-            
-            <div class="aboutContainer">
+      <h2>Marina Ivanovskaya</h2>
+    </header>
 
-                <p>Dedicated future junior software developer looking to utilize teamwork, curious nature, problem-solving skills and creativity. Also Salesforce certified administrator in the Ranger rank.</p>
+    <main class="pic">
+      <a class="anchor" id="about"></a>
+      <section>
+      
+        <h2>About</h2>
 
-                <p>I speak English, Russian, Belarusian, and JavaScript.</p> 
-            </div>
-        </section>
-            
+        <div class="aboutContainer">
+          <p>
+            Dedicated future junior software developer looking to utilize
+            teamwork, curious nature, problem-solving skills and creativity.
+            Also Salesforce certified administrator in the Ranger rank.
+          </p>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul class="container">
-                <li>Nullam faucibus nibh eget ante malesuada, non dictum nunc imperdiet. Pellentesque id erat placerat, feugiat turpis sed, scelerisque nulla.  </li>
-                <li>Aliquam erat volutpat. Etiam eget convallis nibh. Sed tincidunt pretium erat a sodales. Etiam sit amet luctus lacus.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta dignissim lorem, et interdum arcu lobortis eu. </li>
-            </ul>
-        </section>
+          <p>I speak English, Russian, Belarusian, and JavaScript.</p>
+        </div>
+      </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul id="containerSkills"></ul>
-        </section>
+      
+      <section >
+        <a class="anchor" id="experience"></a>
+        <h2>Experience</h2>
+        <ul class="container">
+          <li>
+            Nullam faucibus nibh eget ante malesuada, non dictum nunc imperdiet.
+            Pellentesque id erat placerat, feugiat turpis sed, scelerisque
+            nulla.
+          </li>
+          <li>
+            Aliquam erat volutpat. Etiam eget convallis nibh. Sed tincidunt
+            pretium erat a sodales. Etiam sit amet luctus lacus.
+          </li>
+          <li>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+            porta dignissim lorem, et interdum arcu lobortis eu.
+          </li>
+        </ul>
+      </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul class="projectStyle"></ul>            
-        </section>
+      <section id="skills">
+        <a class="anchor" id="skill"></a>
+        <h2>Skills</h2>
+        <ul id="containerSkills"></ul>
+      </section>
 
-        <div class="messageSection">
+      <section id="projects">
+        <a class="anchor" id="project"></a>
+        <h2>Projects</h2>
+        <ul class="projectStyle"></ul>
+      </section>
+
+      <div class="messageSection">
+        <a class="anchor" id="message"></a>
         <section id="leaveMessage">
-            <h2>Leave a Message</h2>
-            <form name="leave_message">
-                <label for="name">Name: </label><br>
-                <input type="text" name="name" required=true><br>
+          <h2>Leave a Message</h2>
+          <form name="leave_message">
+            <label for="name">Name: </label><br />
+            <input type="text" name="name" required="true" /><br />
 
-                <label for="email">Email: </label><br>
-                <input type="email" name="email" required=true><br>
+            <label for="email">Email: </label><br />
+            <input type="email" name="email" required="true" /><br />
 
-                <label for="message">Message: </label><br>
-                <textarea name="message" required=true></textarea><br>
-                <button type="submit">Submit</button>
-            </form>
+            <label for="message">Message: </label><br />
+            <textarea name="message" required="true"></textarea><br />
+            <button type="submit">Submit</button>
+          </form>
         </section>
 
         <section id="messages" hidden>
-            <h2>Messages</h2>
-            <ul></ul>
+          <h2>Messages</h2>
+          <ul></ul>
         </section>
-    </div>
-        </main>
-        <footer>
-            <section>
-                <!-- <form action=”index.html” method=”post” id="signup">
+      </div>
+    </main>
+    <footer>
+      <section>
+        <!-- <form action=”index.html” method=”post” id="signup">
                     
                     <label for="signup">Sign up for updates:</label> <br>
                     <input type=”email” id=”email” name=”email” required><br>
@@ -94,14 +113,12 @@
                 
                 </form> -->
 
-                <a href="mailto:verasen.create@gmail.com">Email</a>
+        <a href="mailto:verasen.create@gmail.com">Email</a>
 
-                <a href="https://twitter.com/VerasenCreate" target="_blank" >Twitter</a>
+        <a href="https://twitter.com/VerasenCreate" target="_blank">Twitter</a>
+      </section>
+    </footer>
 
-            </section>
-        </footer>
-    
-  
-  <script src="js/index.js"></script>  
-</body>
+    <script src="js/index.js"></script>
+  </body>
 </html>

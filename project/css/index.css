@@ -22,6 +22,7 @@ header {
     padding: 3px;
     position: sticky;
     top: 0px;
+    z-index: 1;
 }
 
 nav {
@@ -44,6 +45,12 @@ nav a {
     font-size: 15px;
 }
 
+a.anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
 
 section {
     margin-top: 0.25rem;
