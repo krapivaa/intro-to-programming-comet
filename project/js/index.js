@@ -1,5 +1,5 @@
 //SKILLS
-let skills =["HTML", "CSS", "JavaScript", "Git", "Bootstrap"];
+let skills =["HTML", "CSS", "JavaScript", "React", "Bootstrap", "Git"];
 
 let skillsSection = document.getElementById("skills");
 let skillList = skillsSection.getElementsByTagName("ul")[0];
@@ -171,5 +171,5 @@ let thisYear = today.getFullYear();
 const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
 
-copyright.innerHTML = "Created by <b>Marina Ivanovskaya</b>&copy  " + thisYear;
+copyright.innerHTML = "Created by &copy<b>Marina Ivanovskaya</b>  " + thisYear;
 footer.appendChild(copyright);
